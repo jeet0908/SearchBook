@@ -36,7 +36,7 @@ class Gallery extends Component {
                                         starSpacing="2px"
                                         name='rating'
                                         />&nbsp;{averageRating}</div>
-                                    <div style={{ 'paddingLeft': '10px', 'color': 'green' }}>{ratingsCount ? ratingsCount : 'N/A' + ' Ratings'}</div>
+                                    <div style={{ 'paddingLeft': '10px', 'color': 'green' }}>{(ratingsCount ? ratingsCount : 'N/A') + ' Ratings'}</div>
                                     <div style={{ 'paddingLeft': '10px', 'color': 'green' }}>{'N/A Reviews'}</div>
                                 </div>
                                 <div><ShowMore
