@@ -13,7 +13,7 @@ class Gallery extends Component {
                 this.props.items.map((item, index) => {
                     let { title, imageLinks, authors, description, ratingsCount, averageRating } = item.volumeInfo;
                     return (
-                        <div class="thumbnail">
+                        <div key={item.id} className="thumbnail">
 
                             <div>
                                 <img
@@ -22,12 +22,12 @@ class Gallery extends Component {
                                     className="bookCover"
                                     />
                             </div>
-                            <div class="descriptionSection">
+                            <div className="descriptionSection">
                                 <div className="bookTitle">
                                     {title}
                                 </div>
                                 <div>{'by ' + authors}</div>
-                                <div class="ratingDesc">
+                                <div className="ratingDesc">
                                     <div><StarRatings
                                         rating={averageRating}
                                         starRatedColor="orange"
