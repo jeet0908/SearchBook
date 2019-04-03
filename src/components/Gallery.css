@@ -23,12 +23,13 @@
 
 .thumbnail{
   display: inline-block;
-  width: 720px;
+  width: 570px;
   height: 220px;
   margin: 10px;
   text-align: left;
   cursor: pointer;
   position: relative;
+  flex:1;
 }
 
 .descriptionSection {
@@ -37,6 +38,11 @@
 
 .ratingDesc{
   display:flex;
+}
+
+.thumbnailWrapper{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* TODO: Apply some updated CSS, or just utilize what is available within React-Bootstrap */
