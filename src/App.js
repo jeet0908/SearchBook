@@ -15,15 +15,12 @@ class App extends Component {
     };
   }
 
-  search(isbn) {
-    
-    const  key = "iTR12aicqzpxgyrh6btzA"; 
-    const API_URL = "https://www.googleapis.com/books/v1/volumes?q=";
+  search() {
+    const API_URL = 'https://www.googleapis.com/books/v1/volumes?q=';
     fetch(`${API_URL}${this.state.query}`)
        .then(response => response.json())
        .then(json => {let {items} = json;
         this.setState({items})
-        console.log('items ----- ', items);
        }); // TODO: Add a catch method here in case the API call fails
   }
 
@@ -44,7 +41,7 @@ class App extends Component {
                   this.search();
                 }
               }} />
-              <InputGroup.Addon onClick={() => this.search('0552137030')}>
+              <InputGroup.Addon onClick={() => this.search()}>
                 <Glyphicon glyph="search"></Glyphicon>
               </InputGroup.Addon>
             </InputGroup>
