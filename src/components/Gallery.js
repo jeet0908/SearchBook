@@ -9,7 +9,7 @@ class Gallery extends Component {
 
     render() {
         return (
-            <div>{
+            <div className="thumbnailWrapper">{
                 this.props.items.map((item, index) => {
                     let { title, imageLinks, authors, description, ratingsCount, averageRating } = item.volumeInfo;
                     return (
@@ -40,12 +40,12 @@ class Gallery extends Component {
                                     <div style={{ 'paddingLeft': '10px', 'color': 'green' }}>{'N/A Reviews'}</div>
                                 </div>
                                 <div><ShowMore
-                                    lines={6}
+                                    lines={5}
                                     more='...more'
                                     less='...less'
                                     anchorClass=''
                                     >
-                                    {description}
+                                    {(description && description.length>500) ? description.substring(0, 250) : description}
                                 </ShowMore></div>
                             </div>
                         </div>
