@@ -5,10 +5,12 @@ Steps -
 1) To run this project in local machine you must ensure that you have latest node and npm module.
 2) ### `npm install` or ### `npm i` to install all module dependencies.
 3) ### `npm start` commond will start the application in local machine
+## Run Test cases
+### `npm test` commond will run the test cases in local machine
+
 ## Updating to New Releases
 
 Features : - Will imporve UI layout by using bootstrap api.
-Feature : Will write test cases for this application
 
 ## Folder Structure
 
